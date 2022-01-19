@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import MapImg from '../../images/mapimg.png';
+// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
 const MapStyles = styled.div`
     background: url(${MapImg}) no-repeat;
@@ -60,21 +61,49 @@ const MapStyles = styled.div`
 `;
 
 function Map() {
+    // const position = [46.6742744446, 4.36339521408]
+
     return (
         <MapStyles>
             <div className="container">
-                <div className="map-card">
-                    <h3 className="map-card-heading">Here i am</h3>
-                    <p className="map-card-p">Montceau Les Mines, Bourgogne, France</p>
-                    <a
-                        className="map-card-link"
-                        href="https://www.google.fr/maps/@46.6714624,4.358144,14z"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                    Ouvrir Google Maps
-                    </a>
+                <div id="map">
+
                 </div>
+                {/* <MapContainer
+                    center={position}
+                    zoom={13}
+                    scrollWheelZoom={false}
+                    style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        boxShadow: '1px 1px 2px rgba(107, 107, 107, 0.9)'
+                    }}
+                >
+                <TileLayer
+                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                    url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+                />
+                <Marker position={position}>
+                    <Popup>
+                        A pretty CSS3 popup. <br /> Easily customizable.
+                    </Popup>
+                </Marker>
+                </MapContainer> */}
+                    <div className="map-card">
+                        {/* <h3 className="map-card-heading">Here i am</h3> */}
+                        <p className="map-card-p">Montceau Les Mines, Bourgogne, France</p>
+                        <a
+                            className="map-card-link"
+                            href="https://www.google.fr/maps/@46.6714624,4.358144,14z"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                        Ouvrir Google Maps
+                        </a>
+                    </div>
             </div>
         </MapStyles>
     );

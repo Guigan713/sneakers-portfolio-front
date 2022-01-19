@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import SectionTitle from '../SectionTitle';
 import MyWorks from '../MyWorks/MyWorks'
 
 import './MyPics.css'
@@ -16,6 +15,7 @@ function MyPics() {
         }
         getPics()
     },[])
+
     return (
         <div className="mypics-wrapper">
             <div className="mypics-container">
